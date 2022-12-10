@@ -26,6 +26,7 @@ public class MemberController {
   public String save(@ModelAttribute MemberDTO memberDTO) {
      System.out.println("회원가입 입력");
      System.out.println("memberDTO = " + memberDTO);
+     memberService.save(memberDTO);
      return "index";
   }
 }
