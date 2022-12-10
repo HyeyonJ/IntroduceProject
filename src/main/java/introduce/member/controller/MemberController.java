@@ -23,13 +23,9 @@ public class MemberController {
 	}
 	
   @PostMapping("/member/save")
-  public String save(@RequestParam("memberEmail") String memberEmail,
-                 	  @RequestParam("memberPassword") String memberPassword,
-                 	  @RequestParam("memberName") String memberName) {
-     System.out.println("MemberController.save");
-     System.out.println("memberEmail = " + memberEmail +
-   		  				", memberPassword = " + memberPassword +
-   		  				", memberName = " + memberName);
+  public String save(@ModelAttribute MemberDTO memberDTO) {
+     System.out.println("회원가입 입력");
+     System.out.println("memberDTO = " + memberDTO);
      return "index";
   }
 }
