@@ -8,6 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import introduce.member.dto.MemberDTO;
+import introduce.member.entity.MemberEntity;
 
 @Entity
 @Setter
@@ -28,4 +30,26 @@ public class MemberEntity {
 	@Column
 	private String memberName;
 	
+	public static MemberEntity toMemberEntity(MemberDTO memberDTO) {
+		MemberEntity memberEntity = new MemberEntity();
+		memberEntity.setMemberEmail(memberDTO.getMemberEmail());
+		memberEntity.setMemberPassword(memberDTO.getMemberPassword());
+		memberEntity.setMemberName(memberDTO.getMemberName());
+		return memberEntity;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
