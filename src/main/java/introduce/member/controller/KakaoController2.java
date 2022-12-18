@@ -61,7 +61,7 @@ public class KakaoController2 {
         String access_Token = "";
         String refresh_Token = "";
         String reqURL = "https://kauth.kakao.com/oauth/token";
-
+// 토큰 발급 시 어떻게 하는 지 알아보는 방법 
         try {
             URL url = new URL(reqURL);
 
